@@ -1,0 +1,80 @@
+@keyframes slideInRight {
+    0% {
+      transform: translateX(100%);
+      clip-path: inset(0 0 0 100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      clip-path: inset(0 0 0 0);
+      opacity: 1;
+    }
+  }
+  
+  .slide-in {
+    animation: slideInRight 2s ease-out forwards;
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+    position: relative; /* Needed for absolute positioning of the title */
+  }
+  
+  .slide-in img {
+    transform: scale(1.1); /* Start slightly larger */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for scaling and opacity */
+  }
+  
+  
+  .slide-in:hover img {
+    transform: scale(1); /* Scale to normal size on hover */
+    opacity: 0.5;
+    
+  }
+  
+
+  .card-title {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Shift back to center */
+    color: white; /* Change color as needed */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    padding: 5px 10px; /* Add some padding */
+    border-radius: 5px; /* Rounded corners */
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+  }
+  
+  .slide-in:hover .card-title {
+    opacity: 1; /* Show title on hover */
+  }
+  
+  #navbar {
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.8s ease; /* Smooth transition for opacity */
+}
+
+#navbar.show {
+    opacity: 1; /* Fully visible */
+}
+
+/* Style for the menu links */
+.menu-enter {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.menu-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 200ms ease-in, transform 200ms ease-in;
+}
+
+.menu-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.menu-exit-active {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 200ms ease-in, transform 200ms ease-in;
+}
