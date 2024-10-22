@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { LogIn, UserRound } from 'lucide-react';
+import { LogIn } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Navbar = ({ visible }) => {
@@ -29,12 +29,7 @@ const Navbar = ({ visible }) => {
     src="/img/R.png"
     alt="Logo"
   />
-</div>
-
-
-
-
-          
+</div>    
 
           {/* Hamburger Icon for Mobile */}
           <div className="lg:hidden">

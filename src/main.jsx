@@ -14,10 +14,15 @@ import Series from './Components/Series/Series';
 import Home from './Components/Home/Home';
 
 const router = createBrowserRouter([
+ 
   {
     path: "/",
     element: <Root></Root>,
     children:[
+      {
+        path: "",
+        element: <Home></Home>
+      },
       {
         path: "/Movies",
         element: <Movies></Movies>
@@ -25,10 +30,6 @@ const router = createBrowserRouter([
       {
         path: "/Anime",
         element: <Anime></Anime>
-      },
-      {
-        path: "/Books",
-        element: <Books></Books>
       },
       {
         path: "/Games",
@@ -39,10 +40,6 @@ const router = createBrowserRouter([
         element: <Series></Series>
       }
     ]
-  },
-  {
-    path: "/Home",
-    element: <Home></Home>
   }
 ]);
 

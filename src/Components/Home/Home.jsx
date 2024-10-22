@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import './Home.css'; // Custom CSS for animations
 import Navbar from '../Navbar/Navbar';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const Home = () => {
   const [visible, setVisible] = useState(false);
@@ -21,7 +21,7 @@ const Home = () => {
         <div className="grid grid-cols-2 lg:grid-cols-4 h-full">
           {/* First Image */}
           <div className="slide-in">
-            <Link to="/movies">
+            <Link to="/Movies">
               <img
                 className="w-full h-full object-cover"
                 src="/img/m (1).jpg"
@@ -33,7 +33,7 @@ const Home = () => {
 
           {/* Second Image */}
           <div className="slide-in">
-            <Link to="/series">
+            <Link to="/Series">
               <img
                 className="w-full h-full object-cover"
                 src="/img/series (1).jpg"
@@ -45,7 +45,7 @@ const Home = () => {
 
           {/* Third Image */}
           <div className="slide-in">
-            <Link to="/anime">
+            <Link to="/Anime">
               <img
                 className="w-full h-full object-cover"
                 src="/img/Final anime re.png"
@@ -57,7 +57,7 @@ const Home = () => {
 
           {/* Fourth Image */}
           <div className="slide-in">
-            <Link to="/games">
+            <Link to="/Games">
               <img
                 className="w-full h-full object-cover"
                 src="/img/game.jpeg"
