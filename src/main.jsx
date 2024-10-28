@@ -8,7 +8,6 @@ import {
 import Root from './Routes/Root';
 import Movies from './Components/Movies/Movies';
 import Anime from './Components/Anime/Anime';
-import Books from './Components/Navbar/Navbar';
 import Games from './Components/Games/Games';
 import Series from './Components/Series/Series';
 import Home from './Components/Home/Home';
