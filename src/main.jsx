@@ -11,6 +11,8 @@ import Anime from './Components/Anime/Anime';
 import Games from './Components/Games/Games';
 import Series from './Components/Series/Series';
 import Home from './Components/Home/Home';
+import Login from './Components/Login/Login';
+import Register from './Components/Register/Register';
 
 const router = createBrowserRouter([
  
@@ -37,6 +39,12 @@ const router = createBrowserRouter([
       {
         path: "/Series",
         element: <Series></Series>
+      },
+      { path: "/login", 
+        element: <Login /> 
+      },
+      { path: "/register", 
+        element: <Register /> 
       }
     ]
   }

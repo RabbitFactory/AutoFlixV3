@@ -16,7 +16,7 @@ const Home = () => {
 
   return (
     <div>
-      <Navbar visible={visible} />
+        {/* <Navbar visible={visible} /> */}
       <div className="h-screen bg-black relative overflow-hidden">
         <div className="grid grid-cols-2 lg:grid-cols-4 h-full">
           {/* First Image */}

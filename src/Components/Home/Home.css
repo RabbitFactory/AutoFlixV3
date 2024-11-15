@@ -47,14 +47,7 @@
     opacity: 1; /* Show title on hover */
   }
   
-  #navbar {
-    opacity: 0; /* Start hidden */
-    transition: opacity 0.8s ease; /* Smooth transition for opacity */
-}
 
-#navbar.show {
-    opacity: 1; /* Fully visible */
-}
 
 /* Style for the menu links */
 .menu-enter {
