@@ -32,47 +32,49 @@ const Register = () => {
 
   return (
     <div className='flex justify-center items-center h-screen'>
-        <div className="register-container">
-      <h2>Register</h2>
-      <form onSubmit={handleRegister}>
-        <div>
-          <label>Email:</label>
-          <input
-            type="email"
-            placeholder="Enter your email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-        </div>
+              <div className=" bg-slate-200 rounded-xl p-10 lg:p-20">
+            <h2 className='mb-4'>Register</h2>
+            <form className='flex flex-col gap-3' onSubmit={handleRegister}>
+            <div>
+               <input
+               className="px-3 py-2 rounded-md"
+                 type="text"
+                 placeholder="Enter your display name"
+                 value={displayName}
+                 onChange={(e) => setDisplayName(e.target.value)}
+                 required
+               />
+             </div>
+              <div>
+                <input
+                className="px-3 py-2 rounded-md"
+                  type="email"
+                  placeholder="Enter your email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
+              </div>
 
-        <div>
-          <label>Password:</label>
-          <input
-            type="password"
-            placeholder="Enter your password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-        </div>
+              <div>
+                
+                <input
+                className="px-3 py-2 rounded-md"
+                  type="password"
+                  placeholder="Enter your password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  required
+                />
+              </div>
 
-        <div>
-          <label>Display Name:</label>
-          <input
-            type="text"
-            placeholder="Enter your display name"
-            value={displayName}
-            onChange={(e) => setDisplayName(e.target.value)}
-            required
-          />
-        </div>
+              
 
-        {error && <p className="error-message">{error}</p>}
+              {error && <p className="error-message">{error}</p>}
 
-        <button type="submit">Register</button>
-      </form>
-    </div>
+              <button className='btn' type="submit">Register</button>
+            </form>
+          </div>
     </div>
   );
 };

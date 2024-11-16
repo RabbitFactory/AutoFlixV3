@@ -22,25 +22,27 @@ const Login = () => {
 
   return (
     <div className="flex justify-center items-center  h-screen">
-        <div className="login-container bg-slate-200 rounded-xl p-20">
-      <h2>Login</h2>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <button type="submit">Login</button>
-        {error && <p className="error">{error}</p>}
-      </form>
-    </div>
+            <div className=" bg-slate-200 rounded-xl p-10 lg:p-20">
+               <h2 className="mb-2">Login</h2>
+              <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
+                <input
+                className="px-3 py-2 rounded-md"
+                  type="email"
+                  placeholder="Email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+                <input
+                className="px-3 py-2 rounded-md"
+                  type="password"
+                  placeholder="Password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+                <button className="btn" type="submit">Login</button>
+                {error && <p className="error">{error}</p>}
+              </form>
+          </div>
     </div>
   );
 };
